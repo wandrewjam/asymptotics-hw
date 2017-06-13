@@ -5,7 +5,7 @@ x = x0 + e*x1 + e**2*x2 + O(e**3)
 f = e*x**3 - 3*x + 1
 f = collect(expand(f),e)
 
-print("First root\n")
+print("\nFirst root\n")
 eq0 = f.coeff(e,0)
 print("Zeroth order:", solveset(eq0))
 sol0 = Rational(1, 3)
@@ -81,3 +81,4 @@ sol2 = sqrt(3)/Integer(72)
 y = y.subs(y2, sol2)
 x = collect(expand(y/e), e)
 print("x =", x)
+print("\n")
